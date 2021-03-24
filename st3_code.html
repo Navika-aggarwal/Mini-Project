@@ -1,0 +1,75 @@
+<html>   
+   <head>
+      <title>Form Validation</title>      
+      
+    
+
+           
+            <script type = "text/javascript">
+            //form validation
+      function validate() {
+
+        if( document.myForm.Name.value == ""&& document.myForm.EMail.value == "" && document.myForm.Number.value == ""){
+            alert("There are multiple Empty Fileds");
+            return false;
+        }
+      
+         if( document.myForm.Name.value == "" ) {
+            alert( "Name field empty!" );
+            document.myForm.Name.focus() ;
+            return false;
+         }
+         if( document.myForm.EMail.value == "" ) {
+            alert( "Email field Empty!" );
+            document.myForm.EMail.focus() ;
+            return false;
+         }
+
+         if( document.myForm.Number.value == "" ) {
+            alert( "Number Field is Empty!" );
+            document.myForm.Number.focus() ;
+            return false;
+         }
+
+
+         //if( document.myForm.Zip.value
+          
+      }
+
+   
+         
+      </script>      
+   </head>
+   
+   <body>
+      <form action = "#" name = "myForm" onsubmit = "return(validate());">
+         <table align="center" cellspacing = "2" cellpadding = "2" border="1" >
+            
+            <tr>
+               <td align = "right">Name</td>
+               <td><input type = "text" name = "Name" /></td>
+            </tr>
+
+            <tr>
+                <td align = "right">Number</td>
+                <td><input type = "text" name = "Number" /></td>
+             </tr>
+
+
+            <tr>
+                <td align = "right">Email</td>
+                <td><input type = "text" name = "EMail" /></td>
+             </tr>
+             
+            
+          
+            
+            <tr>
+               <td align = "right"></td>
+               <td><input type = "submit" value = "Submit" /></td>
+            </tr>
+            
+         </table>
+      </form>      
+   </body>
+</html>
